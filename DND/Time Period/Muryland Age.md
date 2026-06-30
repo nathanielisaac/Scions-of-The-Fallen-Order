@@ -1,0 +1,7 @@
+[[The Muryland Artificers begin the Device]]
+[[Components sourced]]
+[[The Device fires — the Gate tears open]]
+[[Primus's automatons survey Nyr]]
+[[Seren Vael closes the Gate]]
+[[The Device shatters into components]]
+[[The Order of the Chains founded]]

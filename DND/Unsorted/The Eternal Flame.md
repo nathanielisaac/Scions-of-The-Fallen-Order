@@ -1,0 +1,1 @@
+A fire said to have burned continously for over three thousand years. many believe it was gifted by [[Moradin]] himself

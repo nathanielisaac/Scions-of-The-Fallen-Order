@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"ab4fd9eab0f1c0fb","x":140,"y":1007,"width":250,"height":60,"type":"text","text":""},
+		{"id":"914307f79dddb842","type":"file","file":"Characters/Velkros.md","x":-1110,"y":630,"width":250,"height":90},
+		{"id":"0596b52777ebe6a0","type":"file","file":"Characters/Myrkul.md","x":-860,"y":-260,"width":250,"height":260},
+		{"id":"f3d748dbb7f0c294","type":"file","file":"Characters/Asgorath.md","x":-440,"y":-270,"width":250,"height":270},
+		{"id":"155f631fb2180003","type":"file","file":"Characters/Nyrissa.md","x":-50,"y":-260,"width":250,"height":100},
+		{"id":"3e6fe9c6a6dc87bd","type":"file","file":"Characters/Sehanine Moonbow.md","x":-735,"y":630,"width":250,"height":130},
+		{"id":"495b3ef0941b77b9","type":"file","file":"Characters/Melora.md","x":25,"y":630,"width":250,"height":90},
+		{"id":"fb800fb40973e39e","type":"file","file":"Unsorted/Moradin.md","x":810,"y":630,"width":250,"height":90},
+		{"id":"a0eb8b795976e9aa","type":"file","file":"Characters/Beshaba.md","x":840,"y":-60,"width":250,"height":80},
+		{"id":"34ec5c4025cf42b9","type":"file","file":"Characters/Tymora.md","x":480,"y":-60,"width":250,"height":80},
+		{"id":"74129d19025cd2d3","type":"file","file":"Characters/Primus.md","x":400,"y":-710,"width":250,"height":230},
+		{"id":"2e1e25458591ff51","type":"file","file":"Characters/The Avatar of Myrkul.md","x":-1110,"y":-610,"width":250,"height":210},
+		{"id":"e2faa5885d1535a7","type":"file","file":"Characters/Bahamut.md","x":-360,"y":630,"width":250,"height":90},
+		{"id":"2b40760d077a6ffc","type":"file","file":"Characters/St. Gaed.md","x":400,"y":630,"width":250,"height":90},
+		{"id":"b13620410d15b6d0","type":"file","file":"Unsorted/Nyr.md","x":96,"y":233,"width":264,"height":127},
+		{"id":"bec7103508d81fbc","type":"file","file":"Characters/Tyche.md","x":650,"y":-330,"width":250,"height":100},
+		{"id":"143b0fdde1015525","type":"file","file":"Characters/Panzuriel.md","x":-440,"y":-710,"width":250,"height":230}
+	],
+	"edges":[
+		{"id":"009eebfdb9871bfc","fromNode":"bec7103508d81fbc","fromSide":"bottom","toNode":"34ec5c4025cf42b9","toSide":"top"},
+		{"id":"b771ccdc7c5e87c0","fromNode":"bec7103508d81fbc","fromSide":"bottom","toNode":"a0eb8b795976e9aa","toSide":"top"},
+		{"id":"4a198c12048318a7","fromNode":"74129d19025cd2d3","fromSide":"bottom","toNode":"bec7103508d81fbc","toSide":"top"},
+		{"id":"c830efa24ccec976","fromNode":"0596b52777ebe6a0","fromSide":"top","toNode":"143b0fdde1015525","toSide":"bottom"},
+		{"id":"fa0ff975267cfb97","fromNode":"0596b52777ebe6a0","fromSide":"top","toNode":"2e1e25458591ff51","toSide":"bottom"},
+		{"id":"1c9123b0c02c41ad","fromNode":"f3d748dbb7f0c294","fromSide":"bottom","toNode":"e2faa5885d1535a7","toSide":"top"}
+	]
+}

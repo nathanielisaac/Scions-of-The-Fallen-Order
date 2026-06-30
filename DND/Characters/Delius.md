@@ -1,0 +1,1 @@
+his sword [[Oathsworn]]

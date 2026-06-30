@@ -1,0 +1,6 @@
+[[Panzuriel begins his first intrusion]]
+[[Myrkul descends alone]]
+[[Myrkul dies]]
+[[Myrkul corpse settles in the Astral]]
+[[Gaed ascends to godhood]]
+[[Panzurite deposits form]]

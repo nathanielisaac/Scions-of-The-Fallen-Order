@@ -1,0 +1,2 @@
+#Stories
+[[Primus]]'A thing cannot both be and not be.' The first axiom crystallises. [[Panzuriel ]]responds by making a shadow exist in two places at once. The disagreement that becomes all conflict begins.

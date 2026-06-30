@@ -1,0 +1,1 @@
+was the previous leader of Wafeld and was usurped by ![[Lord Saxton]]

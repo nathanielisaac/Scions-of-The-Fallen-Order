@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "1a1983cbc64c3ff2",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d07d7fc75f651f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "532dc949ece6cd34",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "975bff1ab2d28ea8",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f73742bf11c6b41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c72f5fe1b53a65e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d5126d8ad05d0395",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6f7e65c43b0548b5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "421818d5a59cac05",
+    "type": "split",
+    "children": [
+      {
+        "id": "c84ebda958804ae6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b68369e52c48f37e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "80eaa91a81ba440d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5bceca24263b7600",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "eb139f981935d377",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "a182fdf7a695932d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "532dc949ece6cd34",
+  "lastOpenFiles": [
+    "DND/Time Period/Muryland Age.md",
+    "DND/Unsorted/Primordial Dragon Blood.md",
+    "DND/Unsorted/Archmage.md",
+    "DND/Unsorted/Wolfgrove.md",
+    "DND/Unsorted/Wafeld.md",
+    "DND/Unsorted/Wafeld's Thieves Guild.md",
+    "DND/Unsorted/Vallene.md",
+    "DND/Unsorted/United Kingdom of Wafeld.md",
+    "DND/Unsorted/Thoggarde.md",
+    "DND/Unsorted/Thistlewood.md",
+    "DND/Unsorted/The Wayfinder's Guild.md",
+    "DND/Unsorted/The Three Roses.md",
+    "DND/Unsorted/The Stillening.md",
+    "DND/Unsorted/The Pieces of The Muryland Device.canvas",
+    "DND/Unsorted/The Pantheon Of Nyr.canvas",
+    "DND/Unsorted/The Moonspire.md",
+    "DND/Unsorted/The Lantern District.md",
+    "DND/Unsorted/The Kingdom of Aethelgard.canvas",
+    "DND/Unsorted/The Harbor of Horizons.md",
+    "DND/Unsorted/The Hall of New Beginnings.md",
+    "DND/Unsorted/The Great Forge.md",
+    "DND/Unsorted/The God Vessel.md",
+    "DND/Unsorted/The Delian Tomb.md",
+    "DND/Unsorted/The Eternal Flame.md",
+    "DND/Unsorted/The Court of Blossoms.md",
+    "DND/Unsorted/The Council of Wayfinders.md",
+    "DND/Unsorted/The Corpse of Myrkul.md",
+    "DND/Unsorted/The Circle of Wells.md",
+    "DND/Unsorted/The Chitri family.md",
+    "DND/Unsorted/Ranks of Aetheris.canvas",
+    "DND/Unsorted/Fermen People.canvas",
+    "DND/Unsorted/Dimensions.canvas",
+    "DND/Unsorted/Alverra.canvas",
+    "DND/Unsorted",
+    "DND/Time Period",
+    "DND/Stories/- The genisis of Nyr - The Homebrewery.pdf",
+    "DND/Stories",
+    "DND/Species",
+    "DND/Factions",
+    "DND/Characters/orc fighter.png",
+    "DND/Characters",
+    "DND/Admin/Tokens/zyk0vfb0jlh41.jpg",
+    "DND/Admin/Tokens/wazowski-mike.gif",
+    "DND/Admin/Tokens/Screenshot 2026-02-20 211929.jpg",
+    "DND/Admin/Tokens/roll20-tokens-v0-vh8dgub8vw3b1.webp",
+    "DND/Admin/Tokens/roll20-tokens-v0-ae28yub8vw3b1 (1).jpg",
+    "DND/Admin/Tokens/Old+Open+Book+PNG+Art.webp",
+    "DND/Admin/Tokens/med.png",
+    "DND/Admin/Tokens/James_Bond_29_-_Profile.webp",
+    "DND/Admin/Tokens/gaston-s-garcia-20b3a671-1d1c-45d9-b78b-321f905c256d.jpg",
+    "DND/Admin/Tokens",
+    "DND/Admin/Maps/QWsY9fBzFPYDLtNrtXoqqe.jfif",
+    "DND/Admin/Maps"
+  ]
+}

@@ -1,0 +1,12 @@
+
+Undead exist, in the strictest sense, as a violation: [[Myrkul]]'s entire domain was built on the principle that every process must have an end, and undeath is what happens when that end is interrupted, refused, or deliberately delayed. In Myrkul's lifetime, undeath performed with his sanction — granted with purpose to those who still had something unfinished — was treated very differently from undeath imposed without consent. That distinction has not survived his death cleanly.
+
+Undeath Before the Avatar
+While Myrkul lived, undeath was rare, deliberate, and closely administered — a mercy granted sparingly rather than a phenomenon that occurred on its own. The god's personal attention made unauthorized undeath difficult to sustain; something in his governance of the death-domain actively resisted endings being faked or delayed without his direct involvement.
+
+Undeath After Myrkul's Death
+Since Myrkul's death, undeath has become measurably more common, easier to create, and harder to fully undo — a direct, documented consequence of the death-domain's weakened administration under the Avatar and the Crown of Horns. The Pantheon of Nyr and the Genesis document both note, carefully, that there are places in the Astral now where judgment fails entirely and souls drift uncollected. Undead arising in the material world are, in the strictest theological sense, a symptom of the same systemic strain: the law that should prevent or quickly correct an unnatural ending is simply not enforcing itself as completely as it once did.
+DM NOTE  This gives you a clean, lore-consistent reason for undead encounters to feel slightly more common, more resilient, or more numerous as the campaign progresses — without requiring any new plot reveal. It is a natural, ambient consequence of Myrkul's death already established in your Genesis document, not a new thread.
+
+Ghosts, Specifically
+Ghosts — undead bound not by reanimated flesh but by unresolved will — are considered, even by [[Myrkul]]'s own clergy, the most theologically ambiguous undead in Nyr. A ghost is not necessarily a failure of the death-domain's administration; sometimes it is simply a soul whose unfinished business genuinely requires resolution before any judgment can proceed fairly. The wraiths of Saint Gaed encountered by the party, demanding confession before they could be laid to rest, are a clean example of this category: not a failure of death's law, but a precise, narrow exception built into it from the start.

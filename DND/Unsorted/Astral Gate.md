@@ -1,0 +1,1 @@
+Leads to the [[Astral Plane]] located in the [[Howling Ridge]]

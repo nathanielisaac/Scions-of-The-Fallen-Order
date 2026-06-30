@@ -1,0 +1,2 @@
+#Stories
+[[Primus]] attempts to systematise Luck as a predictable variable. [[Tyche]] fractures screaming into [[Tymora]] (favorable odds) and [[Beshaba]] (the wound of the splitting). Neither forgives the word 'categorise'.

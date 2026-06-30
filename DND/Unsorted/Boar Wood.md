@@ -1,0 +1,1 @@
+The majority of lumber of North Alverra comes from here. The place is always filled with monsters, beasts, goblins, and bandits looking for their next meal. There are some smaller settlements here and one notable settlement was attacked and burnt down. A young lady named [[Fiona Hawthorne]] comes from here.

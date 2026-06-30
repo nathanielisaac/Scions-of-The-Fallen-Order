@@ -1,0 +1,429 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans, sans-serif); }
+.pantheon { padding: 16px 0; }
+.pantheon-title { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.pantheon-sub { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px; }
+
+.filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.filter-btn { font-size: 11px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--color-border-secondary); background: var(--color-background-secondary); color: var(--color-text-secondary); cursor: pointer; transition: all .15s; }
+.filter-btn:hover, .filter-btn.active { background: var(--color-text-primary); color: var(--color-background-primary); border-color: var(--color-text-primary); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.god-card { border: 1px solid var(--color-border-tertiary); border-radius: 12px; background: var(--color-background-secondary); cursor: pointer; transition: all .15s; overflow: hidden; }
+.god-card:hover { border-color: var(--color-border-primary); background: var(--color-background-primary); }
+.god-card.selected { border-color: var(--color-text-primary); box-shadow: 0 0 0 1px var(--color-text-primary); }
+.god-card.dimmed { opacity: 0.35; }
+
+.card-header { display: flex; align-items: center; gap: 10px; padding: 12px 14px 8px; }
+.god-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.god-name { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+.god-title { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
+
+.card-body { padding: 0 14px 12px; }
+.domains { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.domain-tag { font-size: 10px; padding: 2px 7px; border-radius: 999px; font-weight: 500; }
+.desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 8px; }
+
+.relations-section { border-top: 1px solid var(--color-border-tertiary); padding: 10px 14px 12px; }
+.rel-label { font-size: 10px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+.rel-list { display: flex; flex-direction: column; gap: 4px; }
+.rel-item { display: flex; align-items: flex-start; gap: 6px; font-size: 12px; color: var(--color-text-secondary); line-height: 1.45; }
+.rel-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+.rel-name { font-weight: 500; color: var(--color-text-primary); }
+
+.detail-panel { margin-top: 14px; border: 1px solid var(--color-border-secondary); border-radius: 12px; padding: 18px; background: var(--color-background-primary); display: none; }
+.detail-panel.open { display: block; }
+.detail-name { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+.detail-role { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 12px; }
+.detail-domains { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.detail-desc { font-size: 14px; color: var(--color-text-primary); line-height: 1.65; margin-bottom: 14px; }
+.detail-lore { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; border-left: 3px solid var(--color-border-secondary); padding-left: 12px; margin-bottom: 14px; font-style: italic; }
+.rel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.rel-card { border: 1px solid var(--color-border-tertiary); border-radius: 8px; padding: 8px 10px; }
+.rel-type { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+.rel-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.45; }
+.close-btn { float: right; font-size: 12px; color: var(--color-text-tertiary); cursor: pointer; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--color-border-tertiary); }
+.close-btn:hover { color: var(--color-text-primary); }
+</style>
+
+<div class="pantheon">
+  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Interactive pantheon of gods and their relations</h2>
+  <div class="pantheon-title">The Pantheon</div>
+  <div class="pantheon-sub">Click any deity to explore their full lore and divine relations</div>
+  <div class="filter-bar" id="filter-bar"></div>
+  <div class="grid" id="god-grid"></div>
+  <div class="detail-panel" id="detail-panel"></div>
+</div>
+
+<script>
+const GODS = [
+  {
+    id: "panzuriel",
+    name: "Panzuriel",
+    title: "The Unraveler",
+    icon: "🕷",
+    color: "#7F77DD",
+    bg: "#EEEDFE",
+    darkBg: "#26215C",
+    role: "God of Chaos",
+    domains: ["Chaos","Darkness","Drow","Evil","Entropy","Madness","Secrets of the Void"],
+    desc: "Panzuriel is the primordial force of unmaking — older than order itself. He does not create; he erodes. Where Primus builds walls, Panzuriel finds the cracks. The drow revere him not out of love but out of terror and kinship with the dark.",
+    lore: "It is said that before the first light was spoken into being, Panzuriel was already waiting in the silence between moments. He is not evil in the way mortals understand — he is entropy given will, the deep current beneath all things that pulls toward dissolution.",
+    relations: [
+      { god: "Primus", type: "eternal-enemy", color: "#E24B4A", desc: "Their conflict is the oldest war — Chaos vs Order. Every act of creation by Primus is an affront; every unraveling by Panzuriel is a wound on the world." },
+      { god: "Myrkul", type: "dark-alliance", color: "#888780", desc: "Where Myrkul ends lives, Panzuriel unravels the soul's coherence. They do not cooperate — they simply move in the same direction." },
+      { god: "Sehanine Moonbow", type: "opposition", color: "#7F77DD", desc: "Sehanine's mysteries are secrets kept; Panzuriel's darkness is secrets that devour. She has hidden things from him since the first age." },
+      { god: "Beshaba", type: "uneasy-kin", color: "#D4537E", desc: "Beshaba's random misfortune sometimes serves Panzuriel's chaos, though she resents being seen as his instrument." }
+    ]
+  },
+  {
+    id: "nyrissa",
+    name: "Nyrissa",
+    title: "She Who Weighs the Thread",
+    icon: "⚖",
+    color: "#D4537E",
+    bg: "#FBEAF0",
+    darkBg: "#4B1528",
+    role: "Goddess of Fate",
+    domains: ["Fate","Destiny","Time","Prophecy","Choice","Consequence","The Loom of Ages"],
+    desc: "Nyrissa does not decide what happens — she witnesses it becoming inevitable. She holds the loom on which every life is a thread, able to see where each leads but bound by her own nature never to cut one before its time.",
+    lore: "Those who seek Nyrissa's favor ask not for good fortune but for the wisdom to walk the path already laid before them. Her seers are rare and haunted — they do not see futures, they see the weight of choices accumulating.",
+    relations: [
+      { god: "Tymora", type: "complement", color: "#639922", desc: "Tymora is the coin's flip; Nyrissa is the consequence of the coin landing. They are not enemies — luck and fate are two faces of the same truth." },
+      { god: "Beshaba", type: "deep-tension", color: "#D4537E", desc: "Beshaba hates that bad luck has consequences Nyrissa already saw coming. She believes Nyrissa could intervene and chooses not to." },
+      { god: "Myrkul", type: "ancient-pact", color: "#888780", desc: "Nyrissa knows when every being will die. She and Myrkul share a grim ledger — she marks the names; he collects them." },
+      { god: "Sehanine Moonbow", type: "sisterhood", color: "#7F77DD", desc: "Both deal in hidden things. Nyrissa sees the shape of what must be; Sehanine guards the mysteries of what might yet be dreamed." }
+    ]
+  },
+  {
+    id: "primus",
+    name: "Primus",
+    title: "The Absolute",
+    icon: "⚙",
+    color: "#378ADD",
+    bg: "#E6F1FB",
+    darkBg: "#042C53",
+    role: "God of Order",
+    domains: ["Order","Law","Structure","Civilization","Mathematics","Inevitability","The Perfect Form"],
+    desc: "Primus does not rule — he simply is the rule. He is the underlying logic that makes existence coherent, the reason a dropped stone falls rather than flies, the principle that contracts hold and debts are paid. His worship is precise, structured, and demanding.",
+    lore: "Primus is said to have spoken the first law before the first age: that a thing cannot both be and not be. From that single axiom, all of reality unfolded. He neither celebrates nor mourns — he simply ensures the equation balances.",
+    relations: [
+      { god: "Panzuriel", type: "eternal-enemy", color: "#E24B4A", desc: "The war between them is not fought in battles but in the persistence of structure against entropy. Every sunset that gives way to dawn is a victory for both, briefly." },
+      { god: "Myrkul", type: "cold-accord", color: "#888780", desc: "Death is orderly. Primus respects that Myrkul keeps his domain tidy. Neither likes the other, but they do not quarrel." },
+      { god: "Tymora", type: "philosophical-friction", color: "#639922", desc: "Luck defies prediction. Primus finds Tymora's domain philosophically irritating — randomness is a gap in the law he has never closed." },
+      { god: "Bahamut", type: "deep-respect", color: "#378ADD", desc: "Justice is law made moral. Primus and Bahamut share the same root: that the universe should function as it should. They rarely speak but deeply accord." }
+    ]
+  },
+  {
+    id: "myrkul",
+    name: "Myrkul",
+    title: "Lord of Bones",
+    icon: "💀",
+    color: "#5F5E5A",
+    bg: "#F1EFE8",
+    darkBg: "#2C2C2A",
+    role: "God of Death",
+    domains: ["Death","Endings","Undeath","The Passage","Grief","Memory of the Dead","The Final Judgment"],
+    desc: "Myrkul is not cruel — he is complete. Every life ends in him, not as punishment but as the final punctuation on a sentence. He governs the passage of souls, the weight of final moments, and the strange mercy of undeath granted only to those who still have a purpose unfulfilled.",
+    lore: "Priests of Myrkul do not weep at funerals — they witness. Death is the only sacrament Myrkul requires. He is said to walk among the dying in the last hour, rarely speaking, simply present, as patient as stone.",
+    relations: [
+      { god: "Nyrissa", type: "ancient-pact", color: "#D4537E", desc: "She marks the hour; he answers the call. Their arrangement is the oldest bureaucracy in existence, and neither has broken it." },
+      { god: "Panzuriel", type: "dark-alignment", color: "#7F77DD", desc: "Death gives Chaos a harvest. Panzuriel sends the mad and destroyed; Myrkul receives all, ordered or not." },
+      { god: "Primus", type: "cold-accord", color: "#378ADD", desc: "Both gods respect the other's domain boundaries. Death is law. Primus does not meddle with endings; Myrkul does not question living structure." },
+      { god: "Sehanine Moonbow", type: "quiet-rivalry", color: "#7F77DD", desc: "She governs dreams; he governs what waits beyond the last dream. Her mysteries shelter the living from what Myrkul knows." }
+    ]
+  },
+  {
+    id: "asgorath",
+    name: "Asgorath",
+    title: "The World Shaper",
+    icon: "🐉",
+    color: "#1D9E75",
+    bg: "#E1F5EE",
+    darkBg: "#04342C",
+    role: "Creator of Dragons",
+    domains: ["Dragons","Creation","Primordial Power","Ancient Memory","The Deep Places","Draconic Language","Elemental Chaos"],
+    desc: "Asgorath is not worshipped in temples — she is worshipped in the great age of the world. She breathed the first dragons into being as extensions of elemental will, each flight a philosophy, each color a covenant. She does not speak to mortals; she speaks through the oldest wyrms.",
+    lore: "The oldest dragon-myths say Asgorath did not create dragons so much as she remembered them into existence — that they were always latent in the raw matter of the world, and she simply gave them form and hunger. She sleeps in an age-long rest beneath the world's deepest mountain.",
+    relations: [
+      { god: "Bahamut", type: "child-bond", color: "#378ADD", desc: "Bahamut is her finest creation and her greatest grief — she made him noble and now watches him carry the burden of justice among creatures who struggle to deserve it." },
+      { god: "Primus", type: "creative-tension", color: "#378ADD", desc: "Primus hates that dragons are unpredictable. Asgorath made them that way deliberately — they are her argument against pure order." },
+      { god: "Panzuriel", type: "ancient-grudge", color: "#7F77DD", desc: "Panzuriel has twisted some of her creations toward darkness. She has not forgotten. The shadow dragons are an open wound between them." },
+      { god: "Melora", type: "kindred-spirit", color: "#1D9E75", desc: "Both are gods of wild, ancient things. Melora's wilderness and Asgorath's dragons co-existed before civilization arrived to complicate everything." }
+    ]
+  },
+  {
+    id: "tymora",
+    name: "Tymora",
+    title: "Lady Luck",
+    icon: "🎲",
+    color: "#639922",
+    bg: "#EAF3DE",
+    darkBg: "#173404",
+    role: "Goddess of Luck & Victory",
+    domains: ["Luck","Good Fortune","Skill","Victory","Travelers","The Bold","Unexpected Grace"],
+    desc: "Tymora loves the daring. She rewards not the careful but the reckless who leap before looking and somehow, inexplicably, land. She is the patron of rogues and adventurers, the goddess of the improbable bet paid off, the last-second save.",
+    lore: "It is said Tymora once wagered her entire divine portfolio on a coin flip with Beshaba — and the coin landed standing on its edge. Neither won. Neither lost. They have been sisters-at-war ever since, and the world spins on that standing coin to this day.",
+    relations: [
+      { god: "Beshaba", type: "divine-twin-rivalry", color: "#D4537E", desc: "They are two halves of the same force: luck and mischance, split and set against each other at the dawn of fortune. Where Tymora blesses, Beshaba curses. They circle each other eternally." },
+      { god: "Nyrissa", type: "complement", color: "#D4537E", desc: "Fate and luck are not opposites — they are conversation partners. What Nyrissa foresees, Tymora sometimes overturns. Neither fully understands how." },
+      { god: "Primus", type: "philosophical-friction", color: "#378ADD", desc: "She delights in the places where order cannot predict the outcome. Primus calls her domain 'insufficiently understood mathematics.' She calls that unfair." },
+      { god: "Sehanine Moonbow", type: "warm-friendship", color: "#7F77DD", desc: "Both favor travelers and the wandering spirit. Tymora blesses the journey's odds; Sehanine lights the road at night." }
+    ]
+  },
+  {
+    id: "beshaba",
+    name: "Beshaba",
+    title: "Maid of Misfortune",
+    icon: "🎭",
+    color: "#D85A30",
+    bg: "#FAECE7",
+    darkBg: "#4A1B0C",
+    role: "Goddess of Bad Luck & Misfortune",
+    domains: ["Bad Luck","Accidents","Misfortune","Chaos of Chance","Curses","Spite","The Ruin of the Overconfident"],
+    desc: "Beshaba does not hate mortals — she simply finds their suffering instructive. She is the goddess of the stumble at the critical moment, the door that should have been locked, the horse that throws its rider before the finish line. She demands tribute not from worshippers but from the desperate.",
+    lore: "Her clergy teach that it is better to appease Beshaba with a small token than to ignore her and invite catastrophe. The most devout invoke her not for blessings but for forbearance — please look away. She almost never does.",
+    relations: [
+      { god: "Tymora", type: "divine-twin-rivalry", color: "#639922", desc: "They were once the same entity, luck undivided. Their split is the founding trauma of fortune. Beshaba resents being called the lesser twin." },
+      { god: "Nyrissa", type: "deep-tension", color: "#D4537E", desc: "Nyrissa sees Beshaba's misfortunes coming and does not prevent them. Beshaba interprets this as complicity and has never forgiven fate for knowing." },
+      { god: "Panzuriel", type: "uneasy-kin", color: "#7F77DD", desc: "Chaos and misfortune are cousins. Beshaba resents when Panzuriel takes credit for her work." },
+      { god: "Myrkul", type: "bitter-cooperation", color: "#5F5E5A", desc: "Many of the dead were delivered to Myrkul by Beshaba's touch — an accident, a stumble, a moment's bad fortune. She sends; he receives. Neither acknowledges the arrangement." }
+    ]
+  },
+  {
+    id: "sehanine",
+    name: "Sehanine Moonbow",
+    title: "The Hidden Light",
+    icon: "🌙",
+    color: "#534AB7",
+    bg: "#EEEDFE",
+    darkBg: "#26215C",
+    role: "Goddess of Moon & Dreams",
+    domains: ["Moon","Dreams","Mysteries","Secrets","Travel","The Veil Between","Forgotten Truths","The Language of Symbols"],
+    desc: "Sehanine is the goddess who does not announce herself. She appears in the corner of dreams, in the silver reflection on still water, in the white owl that watches from a branch. She guards the threshold between waking and the deeper truths mortals aren't meant to see directly.",
+    lore: "Her early signs are always the same: moonlit roads that lead somewhere the dreamer doesn't recognize. A distant figure walking just ahead. Pages turning in an unseen journal. Stars reflected in impossible water. A white owl, silent, watching. She does not speak in commands. She speaks in the language of almost-understanding.",
+    relations: [
+      { god: "Nyrissa", type: "sisterhood", color: "#D4537E", desc: "Both traffic in hidden knowledge. Where Nyrissa knows what must come to pass, Sehanine guards what almost was — the dreams, the roads not taken." },
+      { god: "Myrkul", type: "quiet-rivalry", color: "#5F5E5A", desc: "She governs the last dream before death; he governs what comes after. They meet at the threshold but never cross into each other's domain." },
+      { god: "Tymora", type: "warm-friendship", color: "#639922", desc: "Sehanine lights the path; Tymora blesses the traveler walking it. Their domains overlap beautifully in the wandering soul." },
+      { god: "Panzuriel", type: "opposition", color: "#7F77DD", desc: "She has hidden things from him since the first age — including at least one truth so fundamental that its concealment is its own kind of sacred work." }
+    ]
+  },
+  {
+    id: "stgaed",
+    name: "St. Gaed",
+    title: "The Unmasker",
+    icon: "🔍",
+    color: "#BA7517",
+    bg: "#FAEEDA",
+    darkBg: "#412402",
+    role: "Deity of Hidden Truth",
+    domains: ["Revelation","Conspiracy","Secret Orders","Hidden Agendas","Truth as Weapon","Cults","The Cost of Knowing"],
+    desc: "St. Gaed's followers seek the truth hidden in people's hearts — and are quick to find conspiracies, secret orders, and cults lurking beneath the surface of society. Unlike gods of truth who value honesty, Gaed values the *exposed* truth, the secret torn into the light regardless of consequence.",
+    lore: "Gaed was once mortal — a spy, some say, or an inquisitor. Apotheosis came not from great deeds but from learning a truth so total that divinity was the only vessel that could hold it without breaking. The faithful are always watching. Always listening. Always piecing together what no one meant for them to find.",
+    relations: [
+      { god: "Sehanine Moonbow", type: "philosophical-opposition", color: "#534AB7", desc: "Sehanine keeps mysteries; Gaed tears veils away. They are not enemies but they represent a genuine theological divide: should certain truths remain hidden?" },
+      { god: "Nyrissa", type: "uncomfortable-ally", color: "#D4537E", desc: "Gaed's revelations often fulfill fated consequences Nyrissa has already foreseen. She allows his work, though she finds his methods crude." },
+      { god: "Primus", type: "tool-of-order", color: "#378ADD", desc: "Primus occasionally benefits when Gaed's followers expose corruption that undermines civilization. The relationship is one of utility, not affection." },
+      { god: "Panzuriel", type: "unwitting-servant", color: "#7F77DD", desc: "Many of Gaed's revelations sow chaos rather than healing. Panzuriel watches the Unmasker with quiet appreciation for the unintended damage." }
+    ]
+  },
+  {
+    id: "bahamut",
+    name: "Bahamut",
+    title: "The Platinum Dragon",
+    icon: "⚔",
+    color: "#378ADD",
+    bg: "#E6F1FB",
+    darkBg: "#042C53",
+    role: "God of Justice & Protection",
+    domains: ["Justice","Honor","Protection","Nobility","Good Dragons","The Shield of the Innocent","Mercy Earned"],
+    desc: "Bahamut is the ideal that paladins aspire to and fail to reach gracefully. He is not merely just — he is the act of standing between the strong and the weak when it costs everything to do so. His worshippers are not promised safety. They are promised purpose.",
+    lore: "Bahamut is said to walk the mortal world in disguise — an old man with seven canaries who are, in fact, ancient gold dragons. He tests not for power but for character. His clerics learn early: if a stranger is kind to the powerless, watch more closely.",
+    relations: [
+      { god: "Asgorath", type: "child-bond", color: "#1D9E75", desc: "She made him. He has spent eternity trying to be worthy of the creation. She watches, proud and aching, as he carries a burden she gave him without asking." },
+      { god: "Primus", type: "deep-respect", color: "#378ADD", desc: "Justice requires law. Bahamut and Primus share the conviction that civilization must be built on something reliable. They differ on what mercy looks like." },
+      { god: "Moradin", type: "brother-in-arms", color: "#3B6D11", desc: "Two gods of protection and craft — Moradin builds the walls; Bahamut stands before the gate. They have fought alongside each other's champions since the first age." },
+      { god: "Myrkul", type: "necessary-tension", color: "#5F5E5A", desc: "Bahamut fights to protect lives; Myrkul claims them regardless. He does not hate Myrkul. He simply refuses to make Myrkul's work easier." }
+    ]
+  },
+  {
+    id: "melora",
+    name: "Melora",
+    title: "The Wildmother",
+    icon: "🌿",
+    color: "#1D9E75",
+    bg: "#E1F5EE",
+    darkBg: "#04342C",
+    role: "Goddess of Nature & the Sea",
+    domains: ["Nature","Wilderness","Oceans","Storms","The Tide","Wild Growth","Seasons","Creatures of the Deep"],
+    desc: "Melora is not kind. She is the storm that sinks ships and the spring that feeds cities with equal indifference. She does not love mortals — she contains them. Her druids do not pray to her so much as they listen for her, learning to read what she is about to do.",
+    lore: "Her symbol is found wherever the sea meets the shore — that liminal edge where two wild things push against each other. Her faithful say the ocean is her breathing, the forest is her dreaming, and the storm is her waking mood.",
+    relations: [
+      { god: "Asgorath", type: "kindred-spirit", color: "#1D9E75", desc: "The ancient world they both ruled before civilization is what binds them. She does not resent dragons — they are part of the wild she loves." },
+      { god: "Moradin", type: "old-tension", color: "#3B6D11", desc: "Every mine is a wound; every city is a scar. Moradin's work and Melora's wilderness exist in constant negotiation. Her druids and his smiths have been arguing since the first forge was lit." },
+      { god: "Primus", type: "fundamental-opposition", color: "#378ADD", desc: "Nature resists law. Melora's oceans do not care about civilization's borders. Primus views her as the one domain he cannot fully systematize." },
+      { god: "Sehanine Moonbow", type: "gentle-kinship", color: "#534AB7", desc: "The moon moves the tides. This was not a coincidence — it was an agreement. Sehanine and Melora have the oldest working relationship in the divine." }
+    ]
+  },
+  {
+    id: "moradin",
+    name: "Moradin",
+    title: "The Allhammer",
+    icon: "🔨",
+    color: "#3B6D11",
+    bg: "#EAF3DE",
+    darkBg: "#173404",
+    role: "God of Forge & Family",
+    domains: ["Forge","Creation","Family","Endurance","Dwarves","Mountains","Oaths","The Work That Outlasts the Worker"],
+    desc: "Moradin does not promise glory. He promises that if you work hard enough, long enough, and honestly enough, what you build will still be standing when you're gone. He is the patron of craftspeople, miners, parents, and anyone who builds something meant to outlast them.",
+    lore: "His theology is practical and physical. Prayer is held at the forge. The sermon is the quality of the joint where two pieces of metal meet. Sacred texts are not written — they are hammered, stamped, and fired. Truth for Moradin is a thing you can hold.",
+    relations: [
+      { god: "Bahamut", type: "brother-in-arms", color: "#378ADD", desc: "Bahamut upholds the shield; Moradin forges it. They represent the two halves of civilization's defense: the will and the means." },
+      { god: "Melora", type: "old-tension", color: "#1D9E75", desc: "He digs. She grows. Every forge needs ore; every mine removes it. Their followers negotiate the terms of civilization's footprint on the wild." },
+      { god: "Primus", type: "strong-alignment", color: "#378ADD", desc: "Structure, craft, and law are Moradin's blood. He respects Primus deeply, though he believes order must be built — not merely declared." },
+      { god: "Velkros", type: "scholarly-friction", color: "#BA7517", desc: "Knowledge vs craft. Velkros argues the mind creates; Moradin argues the hand does. They are in a debate that will never end." }
+    ]
+  },
+  {
+    id: "velkros",
+    name: "Velkros",
+    title: "Keeper of the Unspoken",
+    icon: "📚",
+    color: "#BA7517",
+    bg: "#FAEEDA",
+    darkBg: "#412402",
+    role: "God of Knowledge & Lost History",
+    domains: ["Knowledge","Memory","Secrets of the Mind","Lost History","Languages","The Archive Eternal","Truth Through Study"],
+    desc: "Velkros collects what the world forgets. Every civilization that fell, every language that died with its last speaker, every discovery lost in fire — Velkros holds them. His clergy are not scholars so much as rescuers, working constantly against the tide of forgetting.",
+    lore: "It is said that Velkros was there when the first word was spoken, and has been listening ever since. His greatest temple is a place mortals cannot reach — a vast archive existing outside of time, where every thought ever thought is preserved. He does not share freely. Knowledge is a treasure, and treasures require proper tribute.",
+    relations: [
+      { god: "Nyrissa", type: "deep-collaboration", color: "#D4537E", desc: "Fate needs memory to mean anything. Nyrissa tells Velkros which histories will matter; he ensures they are not lost before they are needed." },
+      { god: "Sehanine Moonbow", type: "collegial-mystery", color: "#534AB7", desc: "Both guard things from being found. But Sehanine hides to protect; Velkros archives to preserve. Their methods overlap but their motives differ." },
+      { god: "Moradin", type: "scholarly-friction", color: "#3B6D11", desc: "Moradin builds what endures physically; Velkros preserves what endures conceptually. The dwarven tradition of oral history is the point where they agree most." },
+      { god: "St. Gaed", type: "complex-kinship", color: "#BA7517", desc: "Gaed reveals hidden truths; Velkros archives all truths. They serve the same subject from opposite ends. Gaed tears knowledge into the open; Velkros holds it quietly in trust." }
+    ]
+  }
+];
+
+const CATEGORIES = ["All", "Chaos & Order", "Life & Death", "Fortune", "Mysteries", "Creation", "Knowledge"];
+const CAT_MAP = {
+  "Chaos & Order": ["panzuriel","primus"],
+  "Life & Death": ["myrkul","bahamut","moradin"],
+  "Fortune": ["tymora","beshaba","nyrissa"],
+  "Mysteries": ["sehanine","stgaed","velkros"],
+  "Creation": ["asgorath","melora","moradin"]
+};
+
+let activeFilter = "All";
+let selectedId = null;
+
+function getTagStyle(domain) {
+  const palettes = [
+    { bg: "#EEEDFE", color: "#3C3489" },
+    { bg: "#E1F5EE", color: "#085041" },
+    { bg: "#FAECE7", color: "#712B13" },
+    { bg: "#E6F1FB", color: "#0C447C" },
+    { bg: "#EAF3DE", color: "#27500A" },
+    { bg: "#FAEEDA", color: "#633806" },
+  ];
+  const i = (domain.charCodeAt(0) + domain.charCodeAt(domain.length-1)) % palettes.length;
+  return `background:${palettes[i].bg};color:${palettes[i].color};`;
+}
+
+function renderFilters() {
+  const bar = document.getElementById("filter-bar");
+  bar.innerHTML = CATEGORIES.map(c =>
+    `<button class="filter-btn${activeFilter===c?' active':''}" onclick="setFilter('${c}')">${c}</button>`
+  ).join("");
+}
+
+function setFilter(cat) {
+  activeFilter = cat;
+  selectedId = null;
+  document.getElementById("detail-panel").classList.remove("open");
+  renderFilters();
+  renderGrid();
+}
+
+function visibleIds() {
+  if (activeFilter === "All") return GODS.map(g=>g.id);
+  return CAT_MAP[activeFilter] || GODS.map(g=>g.id);
+}
+
+function renderGrid() {
+  const visible = visibleIds();
+  const grid = document.getElementById("god-grid");
+  grid.innerHTML = GODS.filter(g => visible.includes(g.id)).map(g => `
+    <div class="god-card${selectedId===g.id?' selected':''}" onclick="selectGod('${g.id}')">
+      <div class="card-header">
+        <div class="god-icon" style="background:${g.bg}">${g.icon}</div>
+        <div>
+          <div class="god-name">${g.name}</div>
+          <div class="god-title">${g.title}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="domains">
+          ${g.domains.slice(0,4).map(d=>`<span class="domain-tag" style="${getTagStyle(d)}">${d}</span>`).join("")}
+          ${g.domains.length>4?`<span class="domain-tag" style="background:var(--color-background-secondary);color:var(--color-text-tertiary)">+${g.domains.length-4}</span>`:""}
+        </div>
+        <div class="desc">${g.desc.substring(0,130)}…</div>
+      </div>
+      <div class="relations-section">
+        <div class="rel-label">Key relations</div>
+        <div class="rel-list">
+          ${g.relations.slice(0,2).map(r=>`
+            <div class="rel-item">
+              <div class="rel-dot" style="background:${r.color}"></div>
+              <div><span class="rel-name">${r.god}</span> — ${r.desc.substring(0,70)}…</div>
+            </div>`).join("")}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function selectGod(id) {
+  if (selectedId === id) {
+    selectedId = null;
+    document.getElementById("detail-panel").classList.remove("open");
+    renderGrid();
+    return;
+  }
+  selectedId = id;
+  renderGrid();
+  renderDetail(id);
+  setTimeout(()=>document.getElementById("detail-panel").scrollIntoView({behavior:"smooth",block:"nearest"}),100);
+}
+
+function renderDetail(id) {
+  const g = GODS.find(x=>x.id===id);
+  const panel = document.getElementById("detail-panel");
+  panel.classList.add("open");
+  panel.innerHTML = `
+    <button class="close-btn" onclick="selectGod('${id}')">✕ close</button>
+    <div class="detail-name">${g.icon} ${g.name}</div>
+    <div class="detail-role">${g.role} · ${g.title}</div>
+    <div class="detail-domains">
+      ${g.domains.map(d=>`<span class="domain-tag" style="${getTagStyle(d)}">${d}</span>`).join("")}
+    </div>
+    <div class="detail-desc">${g.desc}</div>
+    <div class="detail-lore">${g.lore}</div>
+    <div class="rel-label" style="margin-bottom:8px">Divine relations</div>
+    <div class="rel-grid">
+      ${g.relations.map(r=>`
+        <div class="rel-card" style="cursor:pointer" onclick="selectGod('${GODS.find(x=>x.name===r.god||x.name.startsWith(r.god.split(' ')[0]))?.id}')">
+          <div class="rel-type" style="color:${r.color}">${r.type.replace(/-/g,' ')}</div>
+          <div class="rel-name" style="margin-bottom:3px;font-size:13px">${r.god}</div>
+          <div class="rel-desc">${r.desc}</div>
+        </div>`).join("")}
+    </div>
+  `;
+}
+
+renderFilters();
+renderGrid();
+</script>

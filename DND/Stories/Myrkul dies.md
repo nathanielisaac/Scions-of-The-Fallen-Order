@@ -1,0 +1,2 @@
+#Stories 
+The working consumed [[Myrkul|him]]. He removed the [[Crown of Horns]] and gave it to his most devoted servant — the previous Avatar. Looked at [[Nyrissa]]: 'You knew.' 'Yes.' 'Was it necessary?' 'Yes.' Closed his eyes. Died. First god to ever die.

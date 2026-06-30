@@ -1,0 +1,1 @@
+Harvested from the corpse of dead gods only by tools made of [[Null Stone]]

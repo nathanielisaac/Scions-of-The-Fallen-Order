@@ -1,0 +1,2 @@
+Zandwyn  —  Face of the Wafeld Clock
+Already known to the party. His standing within the wider Clock is higher than he has let on — Faces answer for the contracts they broker, and the convoy interception job he handed the party was, in Clock terms, a serious piece of business he trusted them with quickly. This trust was not necessarily earned through affection; the Clock rewards competence first and loyalty second.

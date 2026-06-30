@@ -1,0 +1,2 @@
+#Stories 
+[[Sehanine Moonbow]] does not announce herself. The other gods notice her the way mortals notice the moon — gradually, then all at once. Only [[Nyrissa]] is unsurprised. 'I knew she was coming.' 'Why didn't you tell us?' 'You didn't ask.'

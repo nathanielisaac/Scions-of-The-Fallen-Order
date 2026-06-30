@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"5e9ed12d61bdecd5","x":260,"y":20,"width":250,"height":60,"type":"file","file":"Unsorted/Thistlewood.md"},
+		{"id":"7b214a418ca524ce","type":"file","file":"Unsorted/King's Landing.md","x":-420,"y":20,"width":250,"height":60},
+		{"id":"e2da6a158cb72c1c","type":"file","file":"Unsorted/Oakhaven.md","x":-80,"y":-280,"width":250,"height":60},
+		{"id":"ee72af09e7ea91c5","type":"file","file":"Unsorted/Wolfgrove.md","x":-80,"y":20,"width":250,"height":60}
+	],
+	"edges":[]
+}

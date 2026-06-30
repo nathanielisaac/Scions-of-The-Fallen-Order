@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"153e316b03bb699f","type":"file","file":"Unsorted/Initiate of the First Star.md","x":-360,"y":-680,"width":640,"height":240},
+		{"id":"67924677001fc39d","type":"file","file":"Unsorted/Arcane Adept.md","x":-360,"y":-380,"width":640,"height":280},
+		{"id":"5b6e9868a369feae","type":"file","file":"Unsorted/Arcane Scholar.md","x":-360,"y":-40,"width":640,"height":300},
+		{"id":"f5d219cdd8cb75a7","type":"file","file":"Unsorted/Magister of the Arcane.md","x":-360,"y":320,"width":640,"height":240},
+		{"id":"63d0c4b164d8fa6e","type":"file","file":"Unsorted/Archmage.md","x":400,"y":-680,"width":620,"height":240},
+		{"id":"221f0e1f5a2c5f3e","type":"file","file":"Unsorted/Grand Arcanist of Aetheris.md","x":400,"y":-380,"width":620,"height":280},
+		{"id":"15c3a3f734a99f77","type":"file","file":"Unsorted/Star Sage.md","x":400,"y":-40,"width":620,"height":300},
+		{"id":"5fa9a3d3aafeb320","type":"file","file":"Unsorted/Ascendant.md","x":400,"y":320,"width":620,"height":240}
+	],
+	"edges":[
+		{"id":"3da2d8a5977a54e0","fromNode":"153e316b03bb699f","fromSide":"bottom","toNode":"67924677001fc39d","toSide":"top"},
+		{"id":"878f75d2f02c6c57","fromNode":"67924677001fc39d","fromSide":"bottom","toNode":"5b6e9868a369feae","toSide":"top"},
+		{"id":"329b90d6c242f051","fromNode":"5b6e9868a369feae","fromSide":"bottom","toNode":"f5d219cdd8cb75a7","toSide":"top"},
+		{"id":"3fcda2c1e65752a5","fromNode":"f5d219cdd8cb75a7","fromSide":"right","toNode":"63d0c4b164d8fa6e","toSide":"left"},
+		{"id":"6114ea6366dfd401","fromNode":"63d0c4b164d8fa6e","fromSide":"bottom","toNode":"221f0e1f5a2c5f3e","toSide":"top"},
+		{"id":"39a6537c9cf42fd0","fromNode":"221f0e1f5a2c5f3e","fromSide":"bottom","toNode":"15c3a3f734a99f77","toSide":"top"},
+		{"id":"9089cc4066e99a9e","fromNode":"15c3a3f734a99f77","fromSide":"bottom","toNode":"5fa9a3d3aafeb320","toSide":"top"}
+	]
+}

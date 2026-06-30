@@ -1,0 +1,9 @@
+Constructs are, almost without exception, expressions of [[Primus]]'s domain — beings of logic and law and geared precision, built rather than born, incapable of the irrationality that defines mortal life. The clearest and most significant constructs in Nyr's current age are [[Primus]]'s own automatons, built across the long ages of his domain's existence as studies in perfect mechanical life, long before any of them ever crossed into [[Nyr]] through the [[Muryland Gate]].
+
+Automatons as a Category
+Primus's automatons are not a unified single design; they range from the surveyor-constructs that catalogued the Muryland Peninsula during [[the Eleven Months]] to far more specialized forms built for specific tasks. What unites them all is responsiveness to Primus's will and total incapacity for deviation — an automaton does not choose, hesitate, or improvise outside its given parameters, because Primus did not build deviation into the category at all.
+
+Mortal-Made Constructs
+Not every construct in Nyr originates from Primus directly. Mortal artificers, golem-crafters, and certain dwarven and gnomish traditions have independently developed the craft of animating inert matter — clay golems, stitched flesh-and-metal constructs, and similar creations exist throughout Nyr's history without any direct involvement from Primus's domain. These mortal-made constructs are theologically distinct from automatons, though the line has grown blurrier in places where mortal artificers have, knowingly or not, incorporated genuine fragments of Primus's resonance into their work.
+
+DM NOTE  This is the cleanest place to seed unease about the Butcherer's experiments and the Dark Metal Knight already established in the campaign: they sit exactly on this blurred mortal-made-versus-Primus-touched line. This document does not need to spell that connection out to players, but it gives you the in-world vocabulary to describe it consistently when it comes up.

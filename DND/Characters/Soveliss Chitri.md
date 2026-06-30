@@ -1,0 +1,1 @@
+was a big elven man with defined muscular features, longer dark hair he tended to tie back in a pony-tail, and fierce glowing green eyes

@@ -1,0 +1,2 @@
+#Stories 
+[[Primus]] lays physical laws. [[Myrkul]] gives seasons. [[Asgorath]] breathes the dragons into being from ancient stone memory. [[Nyrissa]] weaves the loom of consequence. [[Tymora]] scatters luck. [[Beshaba]] follows three steps behind.

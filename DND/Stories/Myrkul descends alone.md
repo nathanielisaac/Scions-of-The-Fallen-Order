@@ -1,0 +1,2 @@
+#Stories
+Into the deep geological roots of the world where [[Panzuriel]] is most himself. The battle lasts eleven mortal years in the deep places where time behaves incorrectly. [[Myrkul]] drives [[Panzuriel]] from [[Nyr]]'s foundations and seals the paths.

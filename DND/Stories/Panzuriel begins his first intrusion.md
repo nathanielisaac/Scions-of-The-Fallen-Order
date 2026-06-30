@@ -1,0 +1,2 @@
+#Stories
+Tired of watching, [[Panzuriel]] starts quietly undoing things: trade routes collapse, a forest dies from inside out, an entire kingdom's dreams turn dark for seven nights. Gods debate. Only [[Myrkul]] acts.

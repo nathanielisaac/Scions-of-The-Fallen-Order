@@ -1,0 +1,2 @@
+#Stories
+[[Myrkul]]'s corpse does not dissolve. Begins fossilising into something between [[Coccineum|flesh and stone]]. The previous [[The Avatar of Myrkul]] circles it on a ship of bones, collecting souls, wearing the Crown. The death-domain continues under administration.

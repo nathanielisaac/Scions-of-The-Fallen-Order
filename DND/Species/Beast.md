@@ -1,0 +1,6 @@
+Beasts were [[Asgorath]]'s first exhale, before she had fully decided what to make. The Genesis of [[Nyr]] records that her breath into the deep places produced 'life-shapes, enormous and elemental' — but this is an account of the dragons specifically, her deliberate masterwork. Beasts are what came before that decision crystallized: the ordinary creatures that filled in around the edges of the world while [[Asgorath]] was still working out what she wanted the dragons to be.
+
+Where dragons were remembered into being — pulled fully formed from sleeping stone — beasts were simply allowed to happen, the natural overflow of a goddess testing what was possible before committing to her masterpiece. This is why beasts vastly outnumber dragons in every corner of Nyr, and why a beast's intelligence and majesty so rarely approaches a dragon's: they were never meant to be the point. They were the practice strokes before the real brushwork.
+
+Why Beasts Keep Changing
+Beasts continue to diversify long after the First Age ended, because Asgorath's original breath did not specify final forms — only the capacity for forms to keep emerging in response to their surroundings. This is the in-world explanation for why new beast species are still occasionally discovered in unexplored regions of Nyr: Asgorath's first breath is, in a very real sense, still settling.

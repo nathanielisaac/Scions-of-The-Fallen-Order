@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "c66196316ee59d1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c1755dfff411a333",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8a044f226e9e2e36",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7984a5834591712d",
+    "type": "split",
+    "children": [
+      {
+        "id": "efa0252b86e6eb72",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "115e20bcc5d1efd5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ccbbc6dc39a30ee5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "11526265407bfa94",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d785a3c1cbf6c9fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "61d3b090009edfdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a45aee6081ae0d12",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sehanine_Moonbow_symbol.webp",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Sehanine_Moonbow_symbol"
+            }
+          },
+          {
+            "id": "1063f498a6067b6a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sehanine_Moonbow_symbol.webp",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Sehanine_Moonbow_symbol"
+            }
+          },
+          {
+            "id": "3da03264f2a3e53a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a4d63a8bcf4d7e4b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "393f6f386580b0e1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sehanine_Moonbow_symbol.webp",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Sehanine_Moonbow_symbol"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+    }
+  },
+  "active": "8a044f226e9e2e36",
+  "lastOpenFiles": [
+    "Factions/The Order Of The Silver Vow.md",
+    "Untitled.md",
+    "Unsorted/Thoggarde.md",
+    "Admin/Untitled (4).jpg",
+    "Admin/dfef52bc718c0e35ded5ad5eb80da4bb-modified.png",
+    "Admin/Nyr_Addendum_Patrons_Panzurite_1.pdf",
+    "Unsorted/Dimensions.canvas",
+    "Characters/Dhamir Eathalen.md",
+    "Species/Dragonborn.md",
+    "Admin/gnome scholar.png",
+    "Unsorted",
+    "Characters",
+    "Factions",
+    "Factions/The Clock.md",
+    "Characters/Oswin Pike.md",
+    "Factions/The Harpers.md",
+    "Characters/Mariel Crane.md",
+    "Characters/Zanwin Thorn.md",
+    "Stories/- The genisis of Nyr - The Homebrewery.pdf",
+    "Time Period/2nd Age.md",
+    "Unsorted/Nyr.md",
+    "Species/Beast.md",
+    "Unsorted/Archmage.md",
+    "Species/Abberation.md",
+    "Stories/Sehanine Moonbow arrives.md",
+    "Unsorted/Rrakis Desert.md",
+    "Unsorted/Falhurst.md",
+    "Characters/Lady Elowen Thornvale.md",
+    "Factions/House Of Lancaster.md",
+    "Species/Monstrosity.md",
+    "Species/Ooze.md",
+    "Species/Plant.md",
+    "Admin/Untitled 1.md",
+    "Species/Giant.md",
+    "Species/Elemental.md",
+    "Unsorted/Alverra.canvas",
+    "Admin/Tokens/9d5d20d5d3d8b04c082b010c5ad4cf51.jpg",
+    "Admin/Maps/173_The Blood & Ale Tavern 25x27_no grid_2K.jpg",
+    "Admin",
+    "Species",
+    "Stories",
+    "Time Period",
+    "Creature_Origins_of_Nyr.docx",
+    "Admin/Tokens/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZjdjMWViODMtZmRmYS00M2FkLWI3MTAtZmU4NTVlY2NhYThlLmpwZWc.webp",
+    "Pasted image 20260625164903.png",
+    "Admin/Untitled (8).jpg",
+    "Unsorted/Ranks of Aetheris.canvas",
+    "Admin/Maps/1647395-c4ba92cc-ab3d-11f0-804a-368e6a012a74.webp",
+    "Unsorted/The Pantheon Of Nyr.canvas",
+    "human female wizard.png",
+    "Untitled.canvas",
+    "Unsorted/The Pieces of The Muryland Device.canvas",
+    "Unsorted/The Kingdom of Aethelgard.canvas",
+    "Unsorted/Fermen People.canvas",
+    "Wafeld.canvas",
+    "Untitled 1.canvas"
+  ]
+}

@@ -1,0 +1,5 @@
+Father - ![[Soveliss Chitri]] 
+Mother - ![[Quillathe Chitri]]
+Eldest Son - ![[Erevan Chitri]]
+Middle Child- ![[Mialee Chitri]]
+Youngest Child - ![[Silaqui Chitri]]

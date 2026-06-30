@@ -1,0 +1,2 @@
+#Stories
+A mortal inquisitor learns a truth too large for a human mind. His mind expands rather than cracks. He was in a cold stone building reading letters. By evening, he was a [[St. Gaed|god]]. He did not leave the building for three days. He was still reading.

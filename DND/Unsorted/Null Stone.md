@@ -1,0 +1,1 @@
+Needs to be refined using [[Arcane Refinement]] that is reserved for high ranking wizards for its anti magic properties. Even then can only be worked by highly skilled smiths such as the legendary [[P. Tato Family]] Once worked into usable tools/weapons can it be used to its maximum potential. 

@@ -1,0 +1,2 @@
+#Stories 
+[[Bahamut]] transcends dragonhood into divinity by choosing justice over power. [[Melora]] crystallizes from [[Nyr]]'s wild immune response. [[Moradin]] emerges from the first forge fire. [[Velkros]] becomes aware of himself when the first great library burns.
