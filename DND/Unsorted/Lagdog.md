@@ -1,1 +1,2 @@
-At war with ![[Wafeld]]
+At war with [[Wafeld]]
+
