@@ -16,4 +16,6 @@ the party then heads towards [[Llandy]] where they find that there's a hidden la
 
 Leaving [[Llandy]], [[Sithra Stormscale]] asks them to deliver some supplies for a wizard named Pinna in Gravesford. Since [[Gravesford]] is on the way to [[Wafeld]], the party decides why not. They find that [[Pinna]] needs to be saved from Orcs. They then track the Orcs to [[Castle Rend]]. There [[Sir Kaelen]] negotiates with the Orc Chief [[White Tusk clan]], they avoided battle using deception. They discover a hidden chapel where they find the Mortal Body of [[St. Gaed]]. [[The Clock]] send [[Willoughby]] to warn the party of [[Sir Pelliton]] arrival in 6-7 days. 
 
-The party now defends their new home, they bring two of [[Pog Champstein]]'s companions, [[Volkan]] & [[Zanwin Thorn]] in [[Wafeld]]. They were assisted by reinforcements sent from [[Zya]] and [[Girr]].  [[Sir Pelliton]] teleports inside the cricle with the help of the Archmage that came with to oversee the operation ([[Archmage Lyrianna Voss]]) 
+The party now defends their new home, they bring two of [[Pog Champstein]]'s companions, [[Volkan]] & [[Zanwin Thorn]] in [[Wafeld]]. They were assisted by reinforcements sent from [[Zya]] and [[Girr]].  [[Sir Pelliton]] teleports inside the cricle with the help of an Archmage that came with to oversee the operation ([[Archmage Lyrianna Voss]]) 
+
+After a brisk and intense battle [[Sir Pelliton]] used the powers of his armor to trap the party into a [[]]

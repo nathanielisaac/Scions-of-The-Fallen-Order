@@ -34,7 +34,7 @@ Her death from illness twenty years ago changed him profoundly.
 
 ### Daughter
 
-**Lyra Thornvale**
+**[[Lyra Thornvale]]**
 
 A diplomat and advisor to several noble houses.
 
@@ -42,7 +42,7 @@ She inherited her father's intelligence and political instincts, though not his 
 
 ### Grandson
 
-**Alden Thornvale**
+**[[Alden Thornvale]]**
 
 A promising student currently studying at Aetheris.
 
