@@ -10,7 +10,7 @@ the oldest of the clans that reside here are mountain Dwarves. you can also expe
 
 The city is ruled by the [[Assembly of Masters]] where each seat belongs to a living master of a particular discipline: 
 	Master Smith - [[Kurogane "Blackhammer" Usagi]]
-	Master Architect 
+	Master Architect - 
 	Master Runecrafter
 	Master Engineer
 	Master Historian
