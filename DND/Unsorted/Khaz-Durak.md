@@ -9,7 +9,7 @@ A large majority of the population is Dwarves.
 the oldest of the clans that reside here are mountain Dwarves. you can also expect to see Deep Dwarves who are experts in mining and subterranean exploration. Gnomes are valued engineers and inventors although they clash philosophically with traditional dwarves. Other races can be found in Khaz-Durak but they rarely hold important positions. 
 
 The city is ruled by the [[Assembly of Masters]] where each seat belongs to a living master of a particular discipline: 
-	Master Smith - [[Kurogane "Blackhammer" Usagi]]
+	Master Smith - [[Kurogane Usagi]]
 	Master Architect - 
 	Master Runecrafter
 	Master Engineer
