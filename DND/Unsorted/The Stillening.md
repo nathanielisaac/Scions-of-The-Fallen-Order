@@ -1,0 +1,1 @@
+A strange and even more rarer disease that seems to only effect spellcasters. 
